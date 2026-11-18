@@ -1,0 +1,87 @@
+:root {
+  color-scheme: light;
+  --ink: #282c29;
+  --muted: #53615b;
+  --accent: #176a50;
+  --mint: #68ddb1;
+  --button-ink: #11362d;
+  --line: #cfdad4;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--ink); font: 1rem/1.65 var(--sans); }
+h1, h2, h3, p, figure, dl, dd, ol { margin: 0; }
+a { color: var(--accent); text-underline-offset: 0.22em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.wrap { width: min(calc(100% - 4rem), 64rem); margin-inline: auto; }
+.skip-link { position: fixed; top: 0.5rem; left: 0.5rem; z-index: 2; padding: 0.5rem; background: white; }
+.skip-link:not(:focus) { clip-path: inset(100%); }
+.masthead, .footnote { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.35rem 1.2rem; }
+.masthead { padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.nameplate { font: 1.45rem/1.1 var(--serif); text-decoration: none; color: var(--ink); }
+nav { display: flex; align-items: center; gap: 1.4rem; }
+nav a { padding-block: 0.3rem; text-decoration: none; }
+nav a:hover, nav a[aria-current] { text-decoration: underline; text-underline-offset: 0.42em; }
+main { min-height: 64vh; padding-block: clamp(2.75rem, 6.5vw, 5rem); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+h1 { font-size: clamp(2.7rem, 5.8vw, 4.6rem); line-height: 1.07; letter-spacing: -0.045em; }
+h2 { font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
+.role { margin-block: 0.8rem 1.3rem; color: var(--accent); font-weight: 550; }
+.introduction > p + p { margin-top: 0.8rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 1.65rem; }
+.button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: var(--button-ink); background: var(--mint); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.button:hover { background: var(--accent); color: white; }
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-areas: "heading portrait" "intro portrait";
+  column-gap: clamp(1.25rem, 4vw, 3rem);
+}
+.profile-heading { grid-area: heading; align-self: start; }
+.introduction { grid-area: intro; }
+.portrait-slot {
+  --feather: 12px;
+  grid-area: portrait;
+  place-self: start center;
+  width: min(100%, 240px);
+  mask-image: linear-gradient(to bottom, transparent, black var(--feather), black calc(100% - var(--feather)), transparent);
+}
+.portrait-slot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(to right, transparent, black var(--feather), black calc(100% - var(--feather)), transparent);
+}
+.reading { max-width: 49rem; }
+.intro { max-width: 61ch; margin-block: 1rem; color: var(--muted); }
+.section { margin-top: 2rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
+.paper-group + .paper-group { margin-top: 2.1rem; }
+.paper-titles { margin: 0.85rem 0 0; padding-left: 1.25rem; }
+.paper-titles li + li { margin-top: 0.7rem; }
+.cv h1 { font-size: clamp(1.65rem, 2.6vw, 2.05rem); letter-spacing: -0.025em; }
+.cv h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+.cv-row { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 0.15rem 1rem; margin-top: 1rem; }
+dt { color: var(--muted); font-variant-numeric: tabular-nums; }
+.references { padding-left: 1.35rem; }
+.references li { margin-top: 0.85rem; }
+.footnote { border-top: 1px solid var(--line); padding-block: 1rem 1.5rem; color: var(--muted); font-size: 0.88rem; }
+.footnote a + a { margin-left: 1.1rem; }
+@media (max-width: 43rem) {
+  .wrap { width: min(calc(100% - 2.5rem), 36rem); }
+  .cv-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 32rem) {
+  .profile {
+    grid-template-columns: minmax(0, 1fr) clamp(5rem, 28vw, 8rem);
+    grid-template-areas: "heading portrait" "intro intro";
+    gap: 1.35rem 1rem;
+  }
+  .profile .role { margin-bottom: 0; }
+}
+@media (max-width: 25rem) {
+  .wrap { width: calc(100% - 2rem); }
+  nav { gap: 0.85rem; }
+}

@@ -8,6 +8,7 @@
   --line: #cfdad4;
   --serif: Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --reading-size: 1.125rem;
 }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; background: #fff; color: var(--ink); font: 1rem/1.65 var(--sans); }
@@ -32,10 +33,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .role { margin-block: 0.8rem 1.3rem; color: var(--accent); font-weight: 550; }
 .introduction > p + p { margin-top: 0.8rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 1.65rem; }
-.button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: var(--button-ink); background: var(--mint); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: var(--button-ink); background: var(--mint); text-decoration: none; font-weight: 600; }
 .button:hover { background: var(--accent); color: white; }
 .profile {
   display: grid;
+  font-size: var(--reading-size);
+  line-height: 1.55;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   grid-template-areas: "heading portrait" "intro portrait";
   column-gap: clamp(1.25rem, 4vw, 3rem);
@@ -62,7 +65,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .paper-list { list-style: none; margin: 1.15rem 0 0; padding: 0; }
 .paper-list li + li { margin-top: 1.2rem; }
 .paper-list h3 {
-  font: 400 clamp(1.125rem, 2vw, 1.25rem)/1.4 var(--serif);
+  font: 400 var(--reading-size)/1.4 var(--serif);
   text-wrap: pretty;
 }
 .publications h3 a { text-decoration-thickness: 1px; text-underline-offset: 0.14em; }

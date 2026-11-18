@@ -30,15 +30,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
 h1 { font-size: clamp(2.7rem, 5.8vw, 4.6rem); line-height: 1.07; letter-spacing: -0.045em; }
 h2 { font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; }
 h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
-.role { margin-block: 0.8rem 1.3rem; color: var(--accent); font-weight: 550; }
-.introduction > p + p { margin-top: 0.8rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 1.65rem; }
+.role { margin-block: 1.15rem clamp(1.6rem, 2.6vw, 2rem); color: var(--accent); font-weight: 550; }
+.introduction > p + p { margin-top: clamp(1.1rem, 2vw, 1.5rem); }
+.actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 2rem; }
 .button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: var(--button-ink); background: var(--mint); text-decoration: none; font-weight: 600; }
 .button:hover { background: var(--accent); color: white; }
 .profile {
   display: grid;
   font-size: var(--reading-size);
-  line-height: 1.55;
+  line-height: 1.65;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   grid-template-areas: "heading portrait" "intro portrait";
   column-gap: clamp(1.25rem, 4vw, 3rem);
@@ -104,7 +104,7 @@ dt { color: var(--muted); font-variant-numeric: tabular-nums; }
   .profile {
     grid-template-columns: minmax(0, 1fr) clamp(5rem, 28vw, 8rem);
     grid-template-areas: "heading portrait" "intro intro";
-    gap: 1.35rem 1rem;
+    gap: 1.6rem 1rem;
   }
   .profile .role { margin-bottom: 0; }
 }

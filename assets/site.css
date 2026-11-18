@@ -61,8 +61,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .paper-group + .paper-group { margin-top: 2.75rem; }
 .paper-list { list-style: none; margin: 1.15rem 0 0; padding: 0; }
 .paper-list li + li { margin-top: 1.2rem; }
-.paper-list h3 { font: 550 1.08rem/1.45 var(--sans); }
-.publications h3, .working-papers h3 { font: 400 clamp(1.3rem, 2.2vw, 1.5rem)/1.35 var(--serif); }
+.paper-list h3 {
+  font: 400 clamp(1.125rem, 2vw, 1.25rem)/1.4 var(--serif);
+  text-wrap: pretty;
+}
 .publications h3 a { text-decoration-thickness: 1px; text-underline-offset: 0.14em; }
 .publications h3 a:hover { text-decoration-thickness: 2px; }
 .publications li + li { margin-top: 1.6rem; }

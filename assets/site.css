@@ -81,7 +81,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
   cursor: pointer;
 }
 .abstract summary:hover, .abstract[open] summary { background: #edf9f3; border-color: var(--accent); }
-.abstract p { max-width: 72ch; margin: 0.7rem 0 0.25rem; }
+.abstract p { margin: 0.7rem 0 0.25rem; }
 .abstract > a { font-size: 0.9rem; }
 .cv h1 { font-size: clamp(1.65rem, 2.6vw, 2.05rem); letter-spacing: -0.025em; }
 .cv h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); }

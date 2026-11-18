@@ -74,6 +74,18 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .publications h3 a { text-decoration-thickness: 1px; text-underline-offset: 0.14em; }
 .publications h3 a:hover { text-decoration-thickness: 2px; }
 .publications li + li { margin-top: 1.6rem; }
+.review-label {
+  display: inline-block;
+  margin-inline-start: 0.25em;
+  padding: 0.06em 0.5em;
+  border: 1px solid var(--line);
+  border-radius: 0.3em;
+  background: #edf9f3;
+  color: var(--accent);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
 .paper-list li > p { color: var(--muted); font-size: 0.95rem; }
 .paper-list .authors { margin-top: 0.25rem; }
 .authors strong { color: var(--ink); font-weight: 600; }
